@@ -8,7 +8,7 @@ Then, set up your environment using either of the following methods (using the C
 In the terminal, run the following commands.
 ```shell
 # Navigate to the project folder
-cd tsi-flask-api
+cd dockerPython
 # Create and activate a virtual environment:
 python -m venv venv
 ./venv/Scripts/activate
