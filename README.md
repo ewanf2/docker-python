@@ -1,11 +1,6 @@
 # Flask Demo
 
-## Installation
-### Get the code
-In the terminal, use `git clone` to get a copy of the code.
-```shell
-git clone https://github.com/fergcb/tsi-flask-api.git
-```
+
 
 Then, set up your environment using either of the following methods (using the CLI or with PyCharm).
 
