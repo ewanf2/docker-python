@@ -7,7 +7,7 @@ class Config(object):
 
 
 class ProdConfig(Config):
-    SQLALCHEMY_DATABASE_URI = "mysql://USER:PASSWORD@172.17.0.2:3306/sakila"
+    SQLALCHEMY_DATABASE_URI = os.environ.get('SQLALCHEMY_DATABASE_URI')
 
 
 class DevConfig(Config):
