@@ -1,0 +1,29 @@
+services:
+  db:
+    build: ./sakila-db
+    volumes:
+        - db_data:/var/lib/mysql
+
+    restart: on-failure
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpass
+      MYSQL_DATABASE: sakila
+      MYSQL_USER: sakila_user
+      MYSQL_PASSWORD: pass123
+    ports:
+      - "3306:3306"
+  api:
+    build: .
+    ports:
+      - "5000:5000"
+    environment:
+      ENV: PROD
+      SQLALCHEMY_DATABASE_URI: mysql://sakila_user:pass123@db:3306/sakila
+      PYTHONPATH: /app
+    depends_on:
+      - db
+    restart: on-failure
+volumes:
+  db_data:
+
+
