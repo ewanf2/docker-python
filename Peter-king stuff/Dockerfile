@@ -9,5 +9,5 @@ RUN apt-get update && apt-get install -y --no-install-recommends build-essential
 COPY requirements.txt requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
 EXPOSE 5000
-COPY . .
+COPY .. .
 CMD ["python", "app.py"]

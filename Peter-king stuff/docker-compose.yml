@@ -1,6 +1,6 @@
 services:
   db:
-    build: ./sakila-db
+    build: sakila-db
     volumes:
         - db_data:/var/lib/mysql
 
@@ -13,7 +13,7 @@ services:
     ports:
       - "3306:3306"
   api:
-    build: .
+    build: ..
     ports:
       - "5000:5000"
     environment:
